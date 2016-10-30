@@ -176,9 +176,9 @@ class Link extends React.Component {
     render(){
         var {onClick,anchor,to,children,...props} = this.props;
         if(anchor){
-            return (<a {...props}> { children }</a>)
+            return (<a {...props} onClick={this.handleClick.bind(this)}> { children }</a>)
         }else{
-            return (<span {...props}> { children }</span>)    
+            return (<span {...props} onClick={this.handleClick.bind(this)}> { children }</span>)    
         }
     }
 };
