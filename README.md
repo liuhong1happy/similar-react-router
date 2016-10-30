@@ -87,3 +87,7 @@ class RouterApp extends React.Component {
 2. require引入react方式，可以兼容IE8。
 
 3. 高度模仿react-router组件，采用hash实现，使用便捷。
+
+## 联系方式
+
+Email: [liuhong1happy](liuhong1.happy@163.com)
