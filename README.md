@@ -70,7 +70,7 @@ class RouterApp extends React.Component {
 - Route 定义路由，可包含子路由
     - path 路由名称，这里指定为"/" `String`
     - component 路由对应的组件 `React.Component`
-    - children 默认路由 `Array<Route> or <Route>`
+    - children 子路由 `Array<Route> or <Route>`
 - Link 简单路由链接
     - to 跳转到的路由名称 `String`
     - onClick 路由点击回调函数，内部已经实现路由跳转 `Function`
