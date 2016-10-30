@@ -1,0 +1,23 @@
+{
+  "name": "similar-react-router",
+  "version": "0.0.1",
+  "description": "similar react-router",
+  "main": "react-router.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuhong1happy/similar-react-router.git"
+  },
+  "keywords": [
+    "react",
+    "react-router"
+  ],
+  "author": "Holly Liu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liuhong1happy/similar-react-router/issues"
+  },
+  "homepage": "https://github.com/liuhong1happy/similar-react-router#readme"
+}
