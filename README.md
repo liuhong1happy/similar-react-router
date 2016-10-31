@@ -2,6 +2,10 @@
 
 similar react-router
 
+## 安装
+
+	npm install --save similar-react-router
+
 ## 用法
 
 ``` js
@@ -19,12 +23,24 @@ var RootComponent = (props)=>{
                 <Link to="/home/list" anchor={true}>列表页</Link>
             </li>
             <li>
-                <Link to="/home/detail" anchor={true}>详情页</Link>
+                <Link to="/home/detail/page001" anchor={true}>详情页</Link>
+            </li>
+            <li>
+                <Link to="/other?name=Other" anchor={true}>其它页面</Link>
             </li>
         </ul>
         <div>{props.children}</div>
     </div>)
 }
+
+var HomePage = (props)=>{
+	return (<div className="home-page">{props.children}</div>)
+}
+
+var OtherPage = (props)=>{
+	return (<div>{"This is "+props.name+" page!"}</div>)
+}
+
 
 var HomeIndexPage = ()=>{
     return (<div>
@@ -38,8 +54,8 @@ var HomeListPage = ()=>{
     </div>)
 }
 
-var HomeDetailPage = ()=>{
-    return (<div>
+var HomeDetailPage = (props)=>{
+    return (<div id={"detail-"+props.id}>
         This is HomeDetailPage!
     </div>)
 }
@@ -49,9 +65,12 @@ class RouterApp extends React.Component {
 	render(){
 		return (
 			<Router defaultRoute="/home/index" path="/" component={RootComponent}>
-				<Route path="index" component={HomeIndexPage} />
-                <Route path="list" component={HomeListPage} />
-				<Route path="detail" component={HomeDetailPage} />
+				<Route path="home" component={HomePage}>
+					<Route path="index" component={HomeIndexPage} />
+					<Route path="list" component={HomeListPage} />
+					<Route path="detail/:id" component={HomeDetailPage} />
+				</Route>
+				<Route path="ohter" component={OtherPage}></Route>
 			</Router>
 		)
 	}
@@ -67,7 +86,7 @@ class RouterApp extends React.Component {
     - path 路由名称，这里指定为"/" `String`
     - component 路由对应的组件 `React.Component`
     - defaultRoute 默认路由 `String`
-- Route 定义路由，可包含子路由
+- Route 定义路由，可包含子路由，允许定义[:id]格式路由，默认允许传递[?id=xxx]方式
     - path 路由名称，这里指定为"/" `String`
     - component 路由对应的组件 `React.Component`
     - children 子路由 `Array<Route> or <Route>`
@@ -87,6 +106,7 @@ class RouterApp extends React.Component {
 2. require引入react方式，可以兼容IE8。
 
 3. 高度模仿react-router组件，采用hash实现，使用便捷。
+
 
 ## 联系方式
 
