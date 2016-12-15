@@ -1,5 +1,8 @@
 # similar-react-router
 
+[![Version](https://img.shields.io/npm/v/similar-react-router.svg)](https://www.npmjs.com/package/similar-react-router)
+[![Downloads](https://img.shields.io/npm/dt/similar-react-router.svg)](https://www.npmjs.com/package/similar-react-router)
+
 similar react-router
 
 ## 安装
