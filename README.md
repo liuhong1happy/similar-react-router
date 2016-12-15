@@ -107,6 +107,8 @@ class RouterApp extends React.Component {
 
 3. 高度模仿react-router组件，采用hash实现，使用便捷。
 
+4. 可以在redux中使用，看[这里](example/redux)。
+
 
 ## 联系方式
 
