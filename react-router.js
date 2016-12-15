@@ -161,9 +161,8 @@ class Router extends React.Component {
     );
   }
 };
-const Route = () => {
-  	return (<div></div>);
-}
+
+const Route = () => <div></div>;
 
 class Link extends React.Component {
     handleClick(e){

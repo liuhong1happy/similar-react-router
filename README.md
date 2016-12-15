@@ -70,7 +70,7 @@ class RouterApp extends React.Component {
 					<Route path="list" component={HomeListPage} />
 					<Route path="detail/:id" component={HomeDetailPage} />
 				</Route>
-				<Route path="ohter" component={OtherPage}></Route>
+				<Route path="other" component={OtherPage}></Route>
 			</Router>
 		)
 	}
